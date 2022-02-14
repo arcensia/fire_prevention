@@ -1,2 +1,1 @@
-소방방재 1차 예시 결과물
-exemle1_add_button
+센서데이터를 MQTT를 이용해 내부 네트워크에 존재하는 브로커(rpi)에 publish(데이터 전송) 하며, 같은 네트워크의 브로커와 topic을 구독하여 pub한 데이터를 subscribe 하여 받아온다.
