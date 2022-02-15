@@ -1,6 +1,6 @@
 NodeMCU보드에 각종 센서를 c언어로 코딩된 데이터값을 받아온다.
 받아온 raw data를 MQTT를 이용해 내부 네트워크에 존재하는 브로커(rpi)에 publish(데이터 전송) 한다.
-같은 네트워크의 브로커와 topic을 구독하여 pub한 raw 데이터를 subscribe 하여 받아온 값을 maria DB에 전송한다.
+같은 네트워크의 브로커와 topic을 구독하여 pub한 raw 데이터를 subscribe 하여 받아온 값을 maria DB에 저장한다.
 Flask를 이용하여 웹서버에 DB에 쌓이는 데이터를 실시간으로 그래프를 갱신시켜 표출한다.
 
 pub.c는 센서 데이터 수집 및 전송 역할을 한다.
