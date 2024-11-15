@@ -1,11 +1,5 @@
 import random
-import time
-from typing import Tuple
-import numpy as np
-from numpy.core import numeric
 import paho.mqtt.client as mqtt_client
-import csv
-from datetime import datetime
 import pymysql
 
 # broker 정보
