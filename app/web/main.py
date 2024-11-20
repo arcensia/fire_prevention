@@ -17,6 +17,7 @@ def setup_database():
 @app.route("/sensor/<sensor>.json")
 def get_sensor_data(sensor):
     results = service.get_sensor_data(sensor)
+    results = [tuple(row) for row in results]
     if results is None:
         return jsonify({"error": "Invalid sensor"}), 404
     return jsonify(results)

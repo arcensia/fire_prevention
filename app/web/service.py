@@ -1,5 +1,5 @@
 from models import IotDatas, db
-import utils
+from app.web.utils import utils
 
 SENSOR_COLUMNS = {
     "DS18b20": IotDatas.w_temp,
@@ -18,12 +18,10 @@ def get_sensor_data(sensor):
 
 
 def insert_test_data():
-    csv_file_path = "/Users/kim-yeonghyeon/PycharmProjects/fire_prevention/AI/data/datas2.csv"
+    csv_file_path = "/Users/kim-yeonghyeon/PycharmProjects/fire_prevention/app/web/utils/datas2.csv"
     records = utils.insert_csv_data(csv_file_path=csv_file_path)
     db.session.bulk_save_objects(records)
     db.session.commit()
 
     # 데이터 확인 (개발용)
     results = IotDatas.query.all()
-    for r in results:
-        print(f"{r.id}, {r.date}, {r.w_temp}, {r.temp}, {r.hum}, {r.co2}, {r.co_temp}, {r.gas}, {r.current}")

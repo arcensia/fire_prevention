@@ -6,7 +6,7 @@
         <script src="{{ url_for('static', filename='jquery-1.8.3.min.js') }}"></script>
 		<script type="text/javascript">
 		$(function () {
-    $.getJSON('http://127.0.0.1:5000/MH_Z19T.json', function (MH_Z19T)
+    $.getJSON('http://127.0.0.1:5000/sensor/MH_Z19T.json', function (MH_Z19T)
      {
         // Create the chart
         var chart1 = $('#container').highcharts('StockChart', {
