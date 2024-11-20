@@ -15,7 +15,7 @@ conn = pymysql.connect(host='localhost',
                        db='firepre',
                        charset='utf8')
 
-#클라이언트 만들기
+#mqtt 클라이언트
 def connect_mqtt() -> mqtt_client:
     def on_connect(client, userdata, flags, rc):
         if rc == 0:
