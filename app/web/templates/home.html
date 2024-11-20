@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Firepre</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <style type="text/css" >
+            #wrapper {
+                width:500px;
+                margin : 0 auto ;
+                border:0px ;
+            }
+            </style>
+	</head>
+	<body>
+        <h1>Welcome to IoT Sensor Dashboard</h1>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h1>    
+                        <div id="wrapper">
+                        센서 데이터
+                        </div>
+                    </h1>
+                    <div id="wrapper">
+					<button type="button" onclick="location.href='sensor/DS18b20'" class="btn btn-secondary">DS18b20</button>
+					<button type="button" onclick="location.href='sensor/DHT22T'" class="btn btn-secondary">DHT22 온도</button>
+                    <button type="button" onclick="location.href='sensor/DHT22H'" class="btn btn-secondary">DHT22 습도</button>
+                    <button type="button" onclick="location.href='sensor/MH_Z19T'" class="btn btn-secondary">MH-Z19 온도</button>
+                    <button type="button" onclick="location.href='sensor/MH_Z19CO2'" class="btn btn-secondary">MH-Z19 이산화탄소</button>
+                    <button type="button" onclick="location.href='sensor/MQ2GAS'" class="btn btn-secondary">MQ2 가스</button>
+                    <button type="button" onclick="location.href='sensor/GY_712C'" class="btn btn-secondary">GY-712 전류</button>
+                    </div>
+				</div>
+			</div>
+		</div>
+
+        <a href="/addData">Add Test Data</a>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	</body>
+</html>
